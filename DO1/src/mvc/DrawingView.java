@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 import javax.swing.JPanel;
 
-public class DrawingView extends JPanel {
+public class DrawingView extends JPanel{
 	private DrawingModel model = new DrawingModel();
 
 	public void setModel(DrawingModel model) {
@@ -13,11 +13,10 @@ public class DrawingView extends JPanel {
 	}
 	
 	public void paint(Graphics g) {
-		super.paint(g);
-		Iterator<Shape> it = model.getShapes().iterator();
+		Iterator<Point> it = model.getPoints().iterator();
 		while(it.hasNext()) {
 			it.next().draw(g);
 		}
 	}
-
+	
 }

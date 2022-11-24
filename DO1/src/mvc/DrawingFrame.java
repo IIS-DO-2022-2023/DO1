@@ -7,8 +7,8 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class DrawingFrame extends JFrame{
-	private DrawingController controller;
 	private DrawingView view = new DrawingView();
+	private DrawingController controller;
 	
 	public DrawingFrame() {
 		view.addMouseListener(new MouseAdapter() {
@@ -24,13 +24,10 @@ public class DrawingFrame extends JFrame{
 		return view;
 	}
 
-	public void setController(DrawingController controller) {
-		this.controller = controller;
+	public void setDrawingController(DrawingController drawingController) {
+		this.controller = drawingController;
 	}
 	
 	
 	
-	
-	
-
 }
